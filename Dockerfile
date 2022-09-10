@@ -1,3 +1,4 @@
+FROM centos:latest
 MAINTAINER ravikumar.kushwha
 RUN yum install -y httpd \
 zip \
