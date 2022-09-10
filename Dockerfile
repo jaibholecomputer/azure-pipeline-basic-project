@@ -1,12 +1,12 @@
 FROM centos:latest
 MAINTAINER ravikumar.kushwha
-RUN yum install -y httpd \
-zip \
-unzip
+CMD yum install -y httpd
+CMD yum install unzip
+CMD yum install zip
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page247/kindle.zip /var/www/html/
 WORKDIR /var/www/html
-RUN unzip kindle.zip
-RUN cp -rvf markups-kindle/*
-RUN rm -rf _MACOSX markups-kindle kindle.zip
+CMD unzip kindle
+CMD cp -rvf markups-kindle/*
+CMD rm -rf _MACOSX markups-kindle kindle.zip
 CMD ["/user/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
