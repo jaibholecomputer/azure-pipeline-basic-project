@@ -30,7 +30,7 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Docker Hub'
-        repository: 'jaibholecomputer374'
+        repository: 'jaibholecomputer374/test'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
         addPipelineData: false
